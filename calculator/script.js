@@ -28,7 +28,7 @@ function callBack(e) {
     // Если оператор btnVal выполняет проверку на равенство, то выполняется функция calculate
     if (btnVal == "=") {
         calculate();
-       
+
     } else if (operators.indexOf(btnVal) > -1) { //иначе, если в параметрах оператор с методом indexOf(возвращает первый индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.), то выполняется функция showOperator
         showOperator();
     } else if (btnVal == ".") {// иначе, если нажата точка, то вызывается функция showDecimal
@@ -70,7 +70,7 @@ function callBack(e) {
         equation = equation.replace(/x/g, "*").replace(/÷/g, "/");//переменная equation равна замене equation параметрами
         if (operators.indexOf(lastChar) > -1 || lastChar == ".")
             equation = equation.replace(/.$/, "");
-        if (equation) { 
+        if (equation) {
             total = eval(equation);
             if (total.toString().indexOf(".") != -1)
                 total = total.toFixed(2);
@@ -80,7 +80,7 @@ function callBack(e) {
     }
 
     function reset() {//кнопка сброса С
-    
+
         console.warn("Function Reset started");
         input.innerHTML = "";
     }
